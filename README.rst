@@ -4,16 +4,33 @@ lean.nvim
 
 ``neovim`` support for the `Lean Theorem Prover
 <https://leanprover.github.io/lean4/doc/>`_.
+``lean.nvim`` supports both `Lean 3
+<https://github.com/leanprover-community/lean>`_ as well as the emerging
+`Lean 4 <https://github.com/leanprover/lean4>`_.
 
 https://user-images.githubusercontent.com/329822/161458848-815be138-58cd-45ed-bd94-bfc03e9f97a0.mov
 
-Prerequisites
--------------
-
-``lean.nvim`` supports neovim 0.6+ (including nightlies).
-
 Installation
 ------------
+
+#. `Install neovim 0.6+ <https://github.com/neovim/neovim/releases/tag/stable>`_.
+
+#. Install `vim-plug <https://github.com/junegunn/vim-plug>`_:
+
+Unix, Linux
+^^^^^^^^^^^
+
+.. code-block:: sh
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+
+Windows (PowerShell)
+^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: powershell
+  iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |\`
+  ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 
 Install via your favorite plugin manager. E.g., with
 `vim-plug <https://github.com/junegunn/vim-plug>`_ via:
